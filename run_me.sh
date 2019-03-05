@@ -6,7 +6,7 @@ TARGET_HOST='localhost'
 # IMAGES
 ELASTIC_STACK_VERSION='6.6.1'
 
-Run es but disable xpack.security
+# Run es but disable xpack.security
 docker rm -f es.local
 docker run -d \
   --rm \
