@@ -1,15 +1,7 @@
 FROM docker.elastic.co/logstash/logstash:6.6.1
 
-# RUN
-RUN mkdir -p /usr/share/logstash/patterns \
-  && chmod -R 777 /usr/share/logstash/patterns
-
-# ENV
-
-# COPY
 COPY Dockerfile /Dockerfile
 COPY pipeline/ /usr/share/logstash/pipeline/
-COPY patterns/ /usr/share/logstash/patterns/
 
 # Metadata params
 ARG BUILD_DATE
